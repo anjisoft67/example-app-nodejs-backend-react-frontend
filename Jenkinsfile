@@ -38,7 +38,7 @@ pipeline {
         stage('Docker_build_push') {
             steps {
                 script {
-                    withDockerRegistry(credentialsId: 'dockercred', toolName: 'docker') {
+                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker') {
                         sh """
                         docker image build -t nodejs:${BUILD_ID} .
                         docker tag nodejs:${BUILD_ID} anjisoft1767/nodejs:${BUILD_ID}
