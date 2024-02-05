@@ -42,7 +42,7 @@ pipeline {
                         sh """
                         docker image build -t nodejs:${BUILD_ID} .
                         docker tag nodejs:${BUILD_ID} anjisoft1767/nodejs:${BUILD_ID}
-                        docker image push anjisoft67/nodejs:${BUILD_ID}
+                        docker image push anjisoft1767/nodejs:${BUILD_ID}
                         """
                     }
                 }
