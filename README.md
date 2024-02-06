@@ -1,44 +1,71 @@
 # example-app-nodejs-backend-react-frontend
 
-> This is an example app created for the blog post '[What is a good directory structure for a monorepo with a Node.js back end and React front end?](https://simonplend.com/what-is-a-good-directory-structure-for-a-monorepo-with-a-node-js-back-end-and-react-front-end/)'.
 
-## Requirements
+                DevOps Assignment
+Exercise: Setting Up CI/CD and Kubernetes Deployment using Terraform
 
-- Node.js >= v12
+Prerequisites:
+AWS cloud account
+Github account
+Docker hub account.,
+building an efficient CI/CD pipeline for a microservices application and deploying it to a Kubernetes cluster.
+Requirements:
+1. Version Control and Repository Setup.
+2. Create a Git repository to host your microservices(Eg. Hello world, nginx, etc)
+application code.
+3. Choose a suitable branching strategy (e.g., Gitflow) for your repository.
+4. CI/CD Pipeline.
+5. Choose a CI/CD tool (e.g., Jenkins, GitLab CI/CD) and set it up.
+6. Configure a webhook or integration between the repository and the CI/CD tool.
+7. Create a pipeline that triggers on code commits or pull requests.
+8. Implement build steps for your microservices, including running tests, code
+quality checks, and creating Docker images.
 
-## Application structure
 
-- `client/` directory - React front end code.
-- `server/` directory - Node.js back end code.
-- `static/` directory - Compiled front end assets. Created by webpack when you run the
-command `npm run build`. The Node.js back end serves serves these assets using the
-[`express.static`](https://expressjs.com/en/starter/static-files.html#serving-static-files-in-express) middleware.
 
-## Usage
+Building an example-app-nodejs-backend-react-frontend microservices application.
 
-```bash
-# Install dependencies for front end and back end
-npm install
 
-# Build front end assets with webpack
-npm run build
+By Creating Instances in AWS cloud.
+Jenkins master (t2.large)
+Installed jenkins and configured the all necessary plugins
+K8s master (t2.medium)
+Install kubeadm
+K8s node (t2.medium)
+Install kubeadm.
+Prometheus (t2.medium)
+Grafana (t2.medium)
 
-# Run Node.js back end server
-npm start
-```
 
-Load up http://localhost:3000 in your browser to view the example website.
+Configured the Plugins in jenkins;
+ NodeJs
+Sonarqube scanner
+Docker
+Kubernetes
+Eclipse Tumerin Installer
+Prometheus
+Step by step configuration:
 
-## Libraries and frameworks used
 
-- [Express](https://expressjs.com/) - "Fast, unopinionated, minimalist web framework for Node.js".
+Step-1: Jenkins master installed jenkins in it.
 
-- [React](https://reactjs.org/) - "A JavaScript library for building user interfaces".
+Jenkins: install plugins nodejs, Eclipse Temurin Installer
 
-- [Webpack](https://www.npmjs.com/package/webpack) - A popular tool for building
-front end assets e.g. CSS and JavaScript.
 
-- [Sucrase](https://www.npmjs.com/package/sucrase) - A simpler and faster
-alternative to [Babel](https://babeljs.io/) which brings support
-for JSX, TypeScript, ES modules, and more to your client side and server side
-JavaScript.
+Installed docker on host machine.
+
+     
+step-2) Run the sonar container after that login to sonar by taking credentials
+install plugin SonarQube Scanner
+docker run -d --name sonar -p 9000:9000 sonarqube:lts-community (created container in jenkins master)
+
+
+
+Configured the webhook to sonar to the jenkins and
+Created project examplenodejs in sonar and webhook configuration to jenkins
+
+Created kubenetes cluster by installing kubeadm both master and node..setup cluster up
+
+
+
+
