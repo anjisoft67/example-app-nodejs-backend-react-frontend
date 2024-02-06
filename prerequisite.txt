@@ -1,0 +1,1 @@
+Github, aws cloud account, Dockerhub account, K8s cluster
