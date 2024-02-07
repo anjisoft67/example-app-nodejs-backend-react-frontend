@@ -42,7 +42,7 @@ pipeline {
                         sh """
                         docker image build -t nodejs:1.0 .
                         docker tag nodejs:1.0 anjisoft67/nodejs:1.0
-                        docker image push anjisoft67/nodejs:$1.0
+                        docker image push anjisoft67/nodejs:1.0
                         """
                     }
                 }
