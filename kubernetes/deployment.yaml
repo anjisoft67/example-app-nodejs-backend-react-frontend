@@ -27,4 +27,4 @@ spec:
             - containerPort: 3000
               protocol: TCP
       imagePullSecrets:
-        - name: docker-registry
+        - name: secret
