@@ -40,9 +40,9 @@ pipeline {
                 script {
                     withDockerRegistry(credentialsId: 'docker', toolName: 'docker') {
                         sh """
-                        docker image build -t nodejs:${BUILD_ID} .
-                        docker tag nodejs:${BUILD_ID} anjisoft67/nodejs:${BUILD_ID}
-                        docker image push anjisoft67/nodejs:${BUILD_ID}
+                        docker image build -t nodejs:1.0 .
+                        docker tag nodejs:1.0 anjisoft67/nodejs:1.0
+                        docker image push anjisoft67/nodejs:$1.0
                         """
                     }
                 }
